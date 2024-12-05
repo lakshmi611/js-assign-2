@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Display</title>
+    <style>
+        /* Styling for the form */
+        form {
+            max-width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="myForm" onsubmit="displayFormData(event)">
+        <h2>Enter Your Information</h2>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function displayFormData(event) {
+            // Prevent the form from submitting (page reload)
+            event.preventDefault();
+
+            // Get the input values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const age = document.getElementById('age').value;
+
+            // Display the values in an alert box
+            alert(`Name: ${name}\nEmail: ${email}\nAge: ${age}`);
+
+            // Optionally, log the values to the console
+            console.log(`Name: ${name}`);
+            console.log(`Email: ${email}`);
+            console.log(`Age: ${age}`);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Content on Button Click</title>
+    <style>
+        #content {
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="content">
+        <p>This is the original content.</p>
+    </div>
+
+    <button onclick="changeContent()">Click to Change Content</button>
+
+    <script>
+        function changeContent() {
+            document.getElementById("content").innerHTML = "<p>This is the new content!</p>";
+        }
+    </script>
+
+</body>
+</html>

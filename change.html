@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text Styling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        #text {
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            color: black;
+            font-weight: normal;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Change Text Style</h1>
+
+    <button onclick="changeFontSize()">Change Font Size</button>
+    <button onclick="changeFontFamily()">Change Font Family</button>
+    <button onclick="changeTextColor()">Change Text Color</button>
+    <button onclick="changeFontWeight()">Change Font Weight</button>
+
+    <div id="text">This is some text that will change based on the button clicked.</div>
+
+    <script>
+        // Change the font size
+        function changeFontSize() {
+            const textElement = document.getElementById('text');
+            textElement.style.fontSize = '30px'; // Change to a larger font size
+        }
+
+        // Change the font family
+        function changeFontFamily() {
+            const textElement = document.getElementById('text');
+            textElement.style.fontFamily = 'Georgia, serif'; // Change to a different font family
+        }
+
+        // Change the text color
+        function changeTextColor() {
+            const textElement = document.getElementById('text');
+            textElement.style.color = 'blue'; // Change the text color to blue
+        }
+
+        // Change the font weight
+        function changeFontWeight() {
+            const textElement = document.getElementById('text');
+            textElement.style.fontWeight = 'bold'; // Change to bold font weight
+        }
+    </script>
+
+</body>
+</html>
